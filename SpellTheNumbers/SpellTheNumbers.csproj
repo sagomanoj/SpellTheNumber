@@ -55,6 +55,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpellNumberConstants.cs" />
+    <Compile Include="SpellNumberProvider.cs" />
     <EmbeddedResource Include="SpellNumber.resx">
       <DependentUpon>SpellNumber.cs</DependentUpon>
     </EmbeddedResource>
