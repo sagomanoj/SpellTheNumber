@@ -16,5 +16,15 @@ namespace SpellTheNumbers
         {
             InitializeComponent();
         }
+
+        private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((string.IsNullOrEmpty(txtNumber.Text) && e.KeyChar.Equals('0')))
+                e.Handled = true;
+            else
+                e.Handled = !(char.IsDigit(e.KeyChar) ||
+                            e.KeyChar.Equals('\b') ||
+                            (string.IsNullOrEmpty(txtNumber.Text) && e.KeyChar.Equals('-')));
+        }
     }
 }
