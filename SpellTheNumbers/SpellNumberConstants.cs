@@ -27,5 +27,8 @@ namespace SpellTheNumbers
         public const long OneHundred = 100;
         public const long Twenty = 20;
         public const long Ten = 10;
+
+        public const string Minus = "-";
+        public const string And = "and";
     }
 }
