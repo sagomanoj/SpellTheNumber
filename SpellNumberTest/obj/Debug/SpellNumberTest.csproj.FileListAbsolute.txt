@@ -1,0 +1,6 @@
+C:\Manoj\Try\SpellTheNumber\SpellTheNumbers\SpellNumberTest\bin\Debug\SpellNumberTest.dll
+C:\Manoj\Try\SpellTheNumber\SpellTheNumbers\SpellNumberTest\bin\Debug\SpellNumberTest.pdb
+C:\Manoj\Try\SpellTheNumber\SpellTheNumbers\SpellNumberTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Manoj\Try\SpellTheNumber\SpellTheNumbers\SpellNumberTest\obj\Debug\SpellNumberTest.csprojResolveAssemblyReference.cache
+C:\Manoj\Try\SpellTheNumber\SpellTheNumbers\SpellNumberTest\obj\Debug\SpellNumberTest.dll
+C:\Manoj\Try\SpellTheNumber\SpellTheNumbers\SpellNumberTest\obj\Debug\SpellNumberTest.pdb
