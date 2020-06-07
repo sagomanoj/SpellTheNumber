@@ -26,5 +26,34 @@ namespace SpellTheNumbers
                             e.KeyChar.Equals('\b') ||
                             (string.IsNullOrEmpty(txtNumber.Text) && e.KeyChar.Equals('-')));
         }
+
+        private void txtNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNumber.Text) && !txtNumber.Text.Equals("-"))
+            {
+                try
+                {
+                    txtNumber.Text = TrimPrefixZeros(txtNumber.Text);
+                    
+                }
+                catch (Exception ex)
+                {
+                    txtResult.Text = "Entered Number crosses the Limit";
+
+                }
+            }
+            else
+            {
+                txtResult.Text = string.Empty;
+            }
+        }
+
+        private string TrimPrefixZeros(string text)
+        {
+            if (text.Length > 1)
+                return text.TrimStart('0');
+            else
+                return text;
+        }
     }
 }

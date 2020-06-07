@@ -30,7 +30,7 @@
         {
             this.lblNumber = new System.Windows.Forms.Label();
             this.txtNumber = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNumber
@@ -48,24 +48,26 @@
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(267, 20);
             this.txtNumber.TabIndex = 1;
+            this.txtNumber.TextChanged += new System.EventHandler(this.txtNumber_TextChanged);
+            this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
-            // textBox1
+            // txtResult
             // 
-            this.textBox1.Location = new System.Drawing.Point(262, 142);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(376, 70);
-            this.textBox1.TabIndex = 2;
+            this.txtResult.Location = new System.Drawing.Point(262, 142);
+            this.txtResult.Multiline = true;
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(376, 70);
+            this.txtResult.TabIndex = 2;
             // 
-            // Form1
+            // SpellNumber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 380);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtResult);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.lblNumber);
-            this.Name = "Form1";
+            this.Name = "SpellNumber";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -76,7 +78,7 @@
 
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.TextBox txtNumber;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtResult;
     }
 }
 
