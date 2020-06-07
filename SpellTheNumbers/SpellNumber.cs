@@ -34,7 +34,8 @@ namespace SpellTheNumbers
                 try
                 {
                     txtNumber.Text = TrimPrefixZeros(txtNumber.Text);
-                    
+                    long numberToBeConverted = Convert.ToInt64(txtNumber.Text);
+                    txtResult.Text = SpellNumberProvider.Instance.SpellTheNumber(numberToBeConverted);
                 }
                 catch (Exception ex)
                 {

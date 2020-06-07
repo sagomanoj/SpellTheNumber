@@ -24,5 +24,19 @@ namespace SpellTheNumbers
                 return _instance;
             }
         }
+
+
+        public string SpellTheNumber(long number)
+        {
+            if (number == 0)
+                return SpellNumberConstants.Zero;
+
+            if (number < 0)
+                return SpellNumberConstants.Zero + SpellTheNumber(Math.Abs(number));
+
+            string result = string.Empty;
+
+            return result;
+        }
     }
 }
