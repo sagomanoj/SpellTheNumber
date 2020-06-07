@@ -38,7 +38,44 @@ namespace SpellTheNumbers
 
             string result = string.Empty;
 
+            if (!string.IsNullOrEmpty(result))
+                result = result.Trim();
 
+            if ((number / SpellNumberConstants.OneQuintillion) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneQuintillion), SpellNumberConstants.Quintillion);
+                number %= SpellNumberConstants.OneQuintillion;
+            }
+
+            if ((number / SpellNumberConstants.OneQuadrillion) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneQuadrillion), SpellNumberConstants.Quadrillion);
+                number %= SpellNumberConstants.OneQuadrillion;
+            }
+
+            if ((number / SpellNumberConstants.OneTrillion) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneTrillion), SpellNumberConstants.Trillion);
+                number %= SpellNumberConstants.OneTrillion;
+            }
+
+            if ((number / SpellNumberConstants.OneBillion) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneBillion), SpellNumberConstants.Billion);
+                number %= SpellNumberConstants.OneBillion;
+            }
+
+            if ((number / SpellNumberConstants.OneMillion) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneMillion), SpellNumberConstants.Million);
+                number %= SpellNumberConstants.OneMillion;
+            }
+
+            if ((number / SpellNumberConstants.OneThounsand) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneThounsand), SpellNumberConstants.Thounsand);
+                number %= SpellNumberConstants.OneThounsand;
+            }
 
             if ((number / SpellNumberConstants.OneHundred) > 0)
             {
