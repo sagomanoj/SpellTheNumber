@@ -10,6 +10,8 @@ namespace SpellTheNumbers
     {
 
         private static SpellNumberProvider _instance = null;
+        private static string[] zeroToNineteen = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+        private static string[] tens = { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
         private SpellNumberProvider()
         {
         }
@@ -35,6 +37,8 @@ namespace SpellTheNumbers
                 return SpellNumberConstants.Zero + SpellTheNumber(Math.Abs(number));
 
             string result = string.Empty;
+
+
 
             return result;
         }
