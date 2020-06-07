@@ -40,6 +40,27 @@ namespace SpellTheNumbers
 
 
 
+            if ((number / SpellNumberConstants.OneHundred) > 0)
+            {
+                result += string.Format("{0} {1} ", SpellTheNumber(number / SpellNumberConstants.OneHundred), SpellNumberConstants.Hundred);
+                number %= SpellNumberConstants.OneHundred;
+            }
+
+            if (number > 0)
+            {
+                if (!string.IsNullOrEmpty(result))
+                    result += string.Format("{0} ", SpellNumberConstants.And);
+
+                if (number < SpellNumberConstants.Twenty)
+                    result += zeroToNineteen[number];
+                else
+                {
+                    result += tens[number / SpellNumberConstants.Ten];
+                    if ((number % SpellNumberConstants.Ten) > 0)
+                        result += " " + zeroToNineteen[number % SpellNumberConstants.Ten];
+                }
+            }
+
             return result;
         }
     }
