@@ -55,5 +55,65 @@ namespace SpellNumberTest
         {
             Assert.AreEqual("one hundred and twenty three", SpellNumberProvider.Instance.SpellTheNumber(123));
         }
+
+        [TestMethod]
+        public void CheckTwentyThousand()
+        {
+            Assert.AreEqual("twenty five thounsand six hundred and twenty five", SpellNumberProvider.Instance.SpellTheNumber(25625));
+        }
+
+        [TestMethod]
+        public void CheckHunderedThousand()
+        {
+            Assert.AreEqual("two hundred and fifty six thounsand two hundred and fifty eight", SpellNumberProvider.Instance.SpellTheNumber(256258));
+        }
+
+        [TestMethod]
+        public void CheckMillion()
+        {
+            Assert.AreEqual("two million five hundred and sixty two thounsand five hundred and eighty nine", SpellNumberProvider.Instance.SpellTheNumber(2562589));
+        }
+
+        [TestMethod]
+        public void CheckTwoMillion()
+        {
+            Assert.AreEqual("two million", SpellNumberProvider.Instance.SpellTheNumber(2000000).Trim());
+        }
+
+        [TestMethod]
+        public void CheckTenMillion()
+        {
+            Assert.AreEqual("twenty million", SpellNumberProvider.Instance.SpellTheNumber(20000000).Trim());
+        }
+
+        [TestMethod]
+        public void CheckHunderedMillion()
+        {
+            Assert.AreEqual("two hundred  million", SpellNumberProvider.Instance.SpellTheNumber(200000000).Trim());
+        }
+
+        [TestMethod]
+        public void CheckBillion()
+        {
+            Assert.AreEqual("two billion", SpellNumberProvider.Instance.SpellTheNumber(2000000000).Trim());
+        }
+
+        [TestMethod]
+        public void CheckTwentyBillion()
+        {
+            Assert.AreEqual("twenty billion", SpellNumberProvider.Instance.SpellTheNumber(20000000000).Trim());
+        }
+
+        [TestMethod]
+        public void CheckTwoHundredBillion()
+        {
+            Assert.AreEqual("two hundred  billion", SpellNumberProvider.Instance.SpellTheNumber(200000000000).Trim());
+        }
+
+        [TestMethod]
+        public void CheckTwoTrillion()
+        {
+            Assert.AreEqual("two trillion", SpellNumberProvider.Instance.SpellTheNumber(2000000000000).Trim());
+        }
     }
 }
